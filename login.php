@@ -1,6 +1,6 @@
 <?php
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
     if($username === 'admin' && $password ==='123456'){
         echo "<h2>Login successful!</h2>";
